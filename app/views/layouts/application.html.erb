@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -5,10 +6,28 @@
   <title><%= html_title yield(:page_title) %></title>
   <%= csrf_meta_tag %>
   <%= stylesheet_link_tag 'application' %>
+  <%= stylesheet_link_tag 'jquery.tweet' %>
   <%= javascript_include_tag 'jquery' %>
   <%= javascript_include_tag 'rails' %>
+  <%= javascript_include_tag 'jquery.tweet' %>	
   <%= open_id_delegation_link_tags(enki_config[:open_id_delegation, :server], enki_config[:open_id_delegation, :delegate]) if enki_config[:open_id_delegation] %>
   <%= yield(:head) %>
+<script type='text/javascript'>
+    $(document).ready(function(){
+        $(".tweet").tweet({
+            username: ["shed30"],
+            join_text: "auto",
+            avatar_size: 0,
+            count: 3,
+            auto_join_text_default: "", 
+            auto_join_text_ed: "",
+            auto_join_text_ing: "",
+            auto_join_text_reply: "",
+            auto_join_text_url: "",
+            loading_text: "loading tweets..."
+        });
+    });
+</script>
 </head>
 <body>
   <div id="page_container">
@@ -27,6 +46,7 @@
           <% end -%>
         </ul>
         <% unless category_links_for_navigation.empty? -%>
+		<div class="tweet"></div>
           <h2>Categories</h2>
           <ul>
             <% category_links_for_navigation.each do |link| -%>
