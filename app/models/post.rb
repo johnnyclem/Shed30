@@ -17,7 +17,9 @@ class Post < ActiveRecord::Base
   def validate_published_at_natural
     errors.add("published_at_natural", "Unable to parse time") unless published?
   end
-
+  
+  attr_accessor :photo
+  
   attr_accessor :minor_edit
   def minor_edit
     @minor_edit ||= "1"
@@ -121,4 +123,5 @@ class Post < ActiveRecord::Base
     value = value.join(", ") if value.respond_to?(:join)
     super(value)
   end
+  has_attached_file :photo
 end

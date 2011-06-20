@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -54,14 +53,7 @@
             <% end -%>
           </ul>
         <% end -%>
-        <form method="get" id="sform" action="http://www.google.com/search">
-          <div>
-            <h2><label for="q">Search</label></h2>
-
-            <input type="text" id="q" value="" name="q">
-            <input type="hidden" name="sitesearch" value="<%= enki_config[:url] %>">
-          </div>
-        </form>
+        
       </div>
 
       <div id="footer"><%= enki_config[:title] %> &#169; 2011 <%= enki_config[:author, :name] %>. </div>

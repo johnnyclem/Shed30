@@ -1,4 +1,158 @@
+.wrap2 {
+      width: 1000px;
+      margin: 0 auto;
+      min-height: 100%;
+    }
+    .wrap1 {
+        float:left;
+        width:100%;
+        background-color: #ffffff;
+        min-height: 100%;
+        position: relative;
+        right: 33%;
+    }
+
+    .left_wrap {
+      float:left;
+      min-height: 100%;
+      width:67%;
+      position:relative;
+      left: 33%;
+    }
+
+    .right_wrap{
+       float:left;
+       width:33%;
+       position:relative;
+       left: 33%;
+	   background: #e4e4e4;
+     }
+     
+
+    .left_col {width: 630px; float: right; min-height: 100%; #666666;}
+    .right_col {width: 310px; margin-top: 140px; padding-left: 20px;}
+
+
+
+    /* Right Column */
+
+    .right_col a {font-weight: bold; color: #000000;}
+    .right_col p {margin-left: 10px;}
+	.right_col {}
+
+    .right_col .description {font-size: 23px; font-weight: bold; font-family: Helvetica, Arial; margin-bottom: 30px;}
+    .right_col h2 {font-size: 20px; clear: both; float: left; margin-bottom: 10px;}
+    #twitter p {margin-left:10px; font-weight: bold; clear: both; margin-bottom: 40px;}
+    #twitterwrapper {background-color: #ffff01; padding: 10px;}
+    #tweetcontainer .content {margin-bottom: 9px;}
+    #tweetcontainer a {font-weight: normal}
+    .tweet_triangle {width: 0px;
+                    margin-left: 20px;
+                    height: 0px;
+                    border-left: 19px solid transparent;
+                    border-right: 0px solid transparent;
+                    border-top: 12px solid #ffff01;}
+
+    .search input {width:255px; height: 44px; padding: 15px 5px 5px 45px; font-size: 16px;  border: none;
+                   -webkit-border-radius: 24px;
+                    -moz-border-radius: 24px;
+                    border-radius: 24px; background: url('http://26.media.tumblr.com/tumblr_lhq8q0SO0h1qztnxqo1_100.png') no-repeat 10px; background-color: #FCF7F7; }
+
+
+
+    /* Left Column */
+
+    .accent {width: 500px; height: 10px; background-color: #ffff01;}
+
+    .title h1 {font-size: 60px;}
+    .title {margin-bottom: 39px; margin-top: 35px; padding-right: 20px}
+
+    .post {width: 595px; position: relative;}
+
+    .info{position: absolute; left: 520px; top: 0; color: #7c7c7c; }
+    .notecontainer{margin-top: 20px;}
+
+
+    .date {margin-bottom: 10px;}
+    
+    .post .go {font-size: 20px;}
+    
+    .footer {padding-top: 10px;}
+    .footer p {margin: 5px 0;}
+    
+    #searchresults {font-size: 18px; padding-bottom: 30px; font-weight: bold; }
+    #tagresults {font-size: 18px; padding-bottom: 30px; font-weight: bold; }
+
+    /* Post Types  */
+
+    .quote {width: 500px;}
+    .quote blockquote {font-size: 20px; line-height: 23px; font-weight: bold;}
+    big.quote {font-size: 60px; color: #e4e4e4; line-height: 34px;}
+
+    .photo {width: 500px;}
+
+    .conversation {width: 500px;}
+
+    .audio {width: 500px;}
+
+    .link {width: 500px;}
+    a.link {font-size: 28px;}
+
+    .regular {width: 500px;}
+
+    .text img {
+     max-width: 500px;
+    }
+
+    .text blockquote img {
+     max-width: 150px;
+    }
+
+    .left_col a {color: #5C5A5A;}
+    
+    a:hover {text-decoration: underline;}
+
+    #disqus_thread {
+       padding: 40px 0;
+       clear: both;
+    }
+
+    #head h1 {font-size: 60px;}
+
+    /* Notes  */
+    
+    ol.notes {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      clear: both;
+    }
+    
+    li.note {
+      margin-bottom: 7px;
+      vertical-align: middle;
+      float: left;
+      clear: both;
+    }
+    
+    li.note img {
+      margin-right: 5px;
+      float: left;
+    }
+    
+    .clearfix {
+      clear: both;
+      height: 0;
+    }
+    
+    .source_url {
+      margin-top: 5px;
+    }
+
+
 /* High level containers */
+
+
 body 
 { 
   color: black;
@@ -114,7 +268,7 @@ img
   width: 15em;
   top: -1px; 
   right: -1px;
-
+  background-color:#e4e4e4;
   border: none;
   padding: 5px;
 }
@@ -364,6 +518,53 @@ pre.ruby .keyword { color: #c41f1f; }
 pre.ruby .constant { color: #961818; }
 pre.ruby .comment { color: #f37e00; }
 pre.ruby .string { color: #b77c0a; }
+
+#s3slider { 
+   width: 720px; /* important to be same as image width */ 
+   height: 405px; /* important to be same as image height */
+   position: relative; /* important */
+   overflow: hidden; /* important */
+}
+
+#s3sliderContent {
+   width: 720px; /* important to be same as image width or wider */
+   position: absolute; /* important */
+   top: 0; /* important */
+   margin-left: 0; /* important */
+}
+
+.s3sliderImage {
+   float: left; /* important */
+   position: relative; /* important */
+   display: none; /* important */
+}
+
+.s3sliderImage span {
+   position: absolute; /* important */
+   left: 0;
+   font: 10px/15px Arial, Helvetica, sans-serif;
+   padding: 10px 13px;
+   width: 720px;
+   background-color: #000;
+   filter: alpha(opacity=70); /* here you can set the opacity of box with text */
+   -moz-opacity: 0.7; /* here you can set the opacity of box with text */
+   -khtml-opacity: 0.7; /* here you can set the opacity of box with text */
+   opacity: 0.7; /* here you can set the opacity of box with text */
+   color: #fff;
+   display: none; /* important */
+   top: 0;
+
+   /*
+       if you put
+       top: 0; -> the box with text will be shown at the top of the image 
+       if you put
+       bottom: 0; -> the box with text will be shown at the bottom of the image
+   */
+}
+
+.clear {
+   clear: both;
+}
 
 /* CODERAY */
 .CodeRay {

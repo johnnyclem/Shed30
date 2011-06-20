@@ -6,6 +6,7 @@
 <%= post_title(@post) -%>
 <% end -%>
 <%= render :partial => 'posts/post', :locals => {:post => @post} %>
+<%= image_tag @post.photo.url %>
 <ol class="commentlist">
   <% @post.approved_comments.each do |comment| -%>
   <li<%=raw cycle(' class="alt"', '') %> id="comment-<%= comment.id %>">
